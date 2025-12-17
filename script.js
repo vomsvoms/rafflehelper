@@ -1,9 +1,3 @@
-// Persistent store using Set for fast lookup and dedup
-const STORAGE_KEY = "raffle_numbers_v1";
-
-let numberSet = loadNumbers();
-updateUI();
-
 // Elements
 const addInput = document.getElementById("addInput");
 const addBtn = document.getElementById("addBtn");
@@ -16,6 +10,11 @@ const count = document.getElementById("count");
 const exportBtn = document.getElementById("exportBtn");
 const importFile = document.getElementById("importFile");
 const clearBtn = document.getElementById("clearBtn");
+
+// Persistent store using Set for fast lookup and dedup
+const STORAGE_KEY = "raffle_numbers_v1";
+let numberSet = loadNumbers();
+updateUI();
 
 // Events
 addBtn.addEventListener("click", () => {
