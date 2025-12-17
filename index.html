@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raffle/Bingo Number Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Raffle/Bingo Number Checker</h1>
+
+    <section class="panel">
+      <h2>Add numbers</h2>
+      <div class="row">
+        <input type="number" id="addInput" placeholder="e.g., 42" />
+        <button id="addBtn">Add</button>
+        <button id="bulkBtn">Bulk add</button>
+      </div>
+      <p class="hint">Tip: Bulk add with commas or ranges like “1-10, 42, 100-105”.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Search</h2>
+      <div class="row">
+        <input type="number" id="searchInput" placeholder="Search a number" />
+        <button id="searchBtn">Check</button>
+      </div>
+      <div id="result" class="result"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Manage list</h2>
+      <div class="row">
+        <button id="exportBtn">Export JSON</button>
+        <input type="file" id="importFile" accept=".json" />
+        <button id="clearBtn" class="danger">Clear all</button>
+      </div>
+      <div class="stats">
+        <span id="count">Count: 0</span>
+      </div>
+      <details>
+        <summary>View numbers</summary>
+        <div id="list" class="list"></div>
+      </details>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
